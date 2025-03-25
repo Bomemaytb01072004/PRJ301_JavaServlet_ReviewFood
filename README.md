@@ -134,8 +134,8 @@ The primary goal of this system is to:
 ![Res Profile](https://github.com/Bomemaytb01072004/PRJ301_JavaServlet_ReviewFood/blob/main/GUI/ResProfile1.png)
 ![Res Profile](https://github.com/Bomemaytb01072004/PRJ301_JavaServlet_ReviewFood/blob/main/GUI/ResProfile2.png)
 - ### Review Feedback and Rating
-![Feedback](https://github.com/Bomemaytb01072004/PRJ301_JavaServlet_ReviewFood/tree/blob/GUI/Feedback.png)
-![Rating](https://github.com/Bomemaytb01072004/PRJ301_JavaServlet_ReviewFood/tree/blob/GUI/Rating.png)
+![Feedback](https://github.com/Bomemaytb01072004/PRJ301_JavaServlet_ReviewFood/blob/main/GUI/Feedback.png)
+![Rating](https://github.com/Bomemaytb01072004/PRJ301_JavaServlet_ReviewFood/blob/main/GUI/Rating.png)
 - ### Admin manager
 ![Admin Dashboard](https://github.com/Bomemaytb01072004/PRJ301_JavaServlet_ReviewFood/blob/main/GUI/AdminProfile.png)
 ![Admin Dashboard](https://github.com/Bomemaytb01072004/PRJ301_JavaServlet_ReviewFood/blob/main/GUI/AdminManager.png)
@@ -144,7 +144,7 @@ The primary goal of this system is to:
 ![Site map](https://github.com/Bomemaytb01072004/PRJ301_JavaServlet_ReviewFood/blob/main/GUI/Sitemap.png)
 
 # 3.ERD
-![ERD](https://github.com/Bomemaytb01072004/PRJ301_JavaServlet_ReviewFood/blob/main/GUI/GUI/ERD.png)
+![ERD](https://github.com/Bomemaytb01072004/PRJ301_JavaServlet_ReviewFood/blob/main/GUI/ERD.png)
 
 # 5.Conclusion and Discussion
 
