@@ -1,0 +1,645 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header styles */
+.header {
+    background: rgb(17,153,142);
+    background: linear-gradient(90deg, rgba(17,153,142,1) 0%, rgba(70,231,156,1) 35%, rgba(29,173,83,1) 100%);
+    padding: 20px; /* Giữ padding như trước */
+    height: 250px; /* Thiết lập chiều cao cho header */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    position: relative; /* Để sidebar có thể căn cứ vào header */
+    z-index: 1; /* Đảm bảo header nằm trên sidebar và settings menu */
+}
+
+.headercontent {
+    margin-left: 17%;
+}
+
+.header .page-path {
+    font-size: 18px;
+}
+
+form.example input[type=text] {
+    padding: 5px;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-right: none;
+    border-radius: 10px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    float: left;
+    width: 80%;
+    background: #ffffff;
+  }
+  
+  form.example button {
+    float: left;
+    width: 20%;
+    padding: 5px;
+    background: #ffffff;
+    color: black;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    border-radius: 10px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    cursor: pointer;
+  }
+
+.header .user-actions span {
+    margin-left: 15px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.home-button {
+    background-color: rgba(255, 255, 255, 0); /* Màu trắng với độ trong suốt 50% */
+    border: none;
+    color: white;
+    padding-right: 0px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* Sidebar styles */
+.sidebar {
+    background-color: #ffffff;
+    height: 95vh; /* Chiều cao sidebar giảm để không vượt quá header */
+    color: #000;
+    padding-top: 20px;
+    position: sticky;
+    top: 20px; /* Dính ở đầu trang */
+    width: 250px;
+    border-right: 1px solid #dee2e6;
+    margin-left: 2%;
+    margin-top: -220px; /* Dịch lên để nằm đè lên header */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    z-index: 10; /* Đảm bảo sidebar nằm trên header */
+}
+
+.sidebar .profile-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar .profile-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.sidebar .profile-name {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.sidebar .dropdown-button {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.sidebar .sidebar-usertitle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebar .menu-items {
+    padding: 0;
+}
+
+.sidebar .menu-item {
+    padding: 10px 15px;
+    color: #000000;
+    cursor: pointer;
+    display: flex;
+    align-items: center;  /* Vertically center both the icon and the text */
+    justify-content: flex-start;  /* Horizontally center the entire content (icon + text) */
+    box-sizing: border-box;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.sidebar .menu-item i {
+    margin-right: 10px;
+    width: 30px; /* Set fixed width to ensure all icons align vertically */
+    text-align: center; /* Center the icon inside its box */
+    display: flex;
+    justify-content: center; /* Center icon horizontally */
+    align-items: center;  /* Center icon vertically */
+}
+
+.sidebar .menu-text {
+    display: flex;
+    align-items: center;  /* Vertically center the text */
+    justify-content: center;  /* Center the icon + text combo */
+}
+
+.sidebar .menu-text span {
+    flex-grow: 1;
+}
+
+.sidebar .menu-item:hover {
+    background-color: #2DCE89;
+    border-radius: 10px;
+}
+
+.sidebar .menu-icon {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+/* Dropdown button styles */
+.dropbtn {
+    background-color: white;
+    background-color: none;
+    color: black;
+    padding: 10px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    outline: none; /* Loại bỏ viền khi nút được nhấp vào */
+}
+
+.dropbtn:focus {
+    outline: none; /* Đảm bảo rằng không có outline khi button được focus */
+}
+
+#arrow {
+    transition: transform 0.3s ease; /* Thêm hiệu ứng chuyển đổi */
+}
+
+/* Xoay biểu tượng xuống */
+.rotate-down {
+    transform: rotate(-90deg);
+  }
+  
+
+#menuItems {
+    display: none; /* Ẩn menu items lúc ban đầu */
+}
+
+.showMenu {
+    display: block; /* Hiển thị menu items khi nhấp vào nút dropdown */
+}
+
+/* Settings Menu styles */
+.settings-menu {
+    height: 30%;
+    background-color: #ffffff;
+    border-right: 1px solid #dee2e6;
+    border-radius: 10px;
+    padding: 20px;
+    position: sticky;
+    top: 20px; /* Dính ở 20px từ đầu trang */
+    margin: -50px 0 0 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 10; /* Đảm bảo settings menu nằm trên header */
+}
+
+.settings-menu ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.settings-menu li {
+    padding: 10px 0;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center; /* Để căn giữa theo chiều dọc */
+    justify-content: flex-start; /* Căn nội dung về phía trái */
+}
+
+
+.settings-menu li:hover {
+    background-color: #f1f3f5;
+}
+
+.settings-menu i {
+    font-size: 18px;
+    margin-right: 15px;
+    width: 30px; /* Đặt chiều rộng cố định cho các biểu tượng */
+    text-align: center; /* Căn giữa biểu tượng trong không gian của nó */
+}
+
+.settings-menu span {
+    font-size: 15px;
+    flex-grow: 1;
+}
+
+/* Modal Background */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 15px;
+    width: 400px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Modal Header Icon */
+  .modal-header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+  }
+  
+  .modal-icon {
+    background-color: #ffeded;
+    color: #ff5a5f;
+    font-size: 24px;
+    padding: 10px;
+    border-radius: 50%;
+  }
+  
+  /* Modal Title */
+  .modal h2 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+  
+  /* Modal Text */
+  .modal p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  
+  /* Modal Buttons */
+  .modal-actions {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .modal .btn {
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+  }
+  
+  .modal .btn-cancel {
+    background-color: #f0f0f0;
+    color: #333;
+  }
+  
+  .modal .btn-cancel:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .modal .btn-confirm {
+    background-color: #ff5a5f;
+    color: white;
+  }
+  
+  .modal .btn-confirm:hover {
+    background-color: #ff4045;
+  }
+  
+
+/* Content styles */
+.content {
+    flex-grow: 1;
+    margin-left: 20px;
+    border-radius: 10px;
+    margin-top: -50px;
+    z-index: 10;
+}
+
+/* Style cho user-data */
+.user-data {
+    display: block;
+    font-size: 1rem;
+    color: #333;
+    padding: 8px 0;
+}
+
+.myprofile h2 {
+    color: #3c404a;
+    margin-bottom: 20px;
+}
+
+.myprofile .form-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    flex-grow: 1;
+}
+
+.myprofile .form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.myprofile .form-group {
+    width: 48%;
+}
+
+.myprofile .form-group label {
+    display: block;
+    color: #7a7a7a;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.editprofile{
+    flex-grow: 1;
+}
+
+.editprofile .form-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    flex-grow: 1;
+}
+
+.editprofile h2 {
+    color: #3c404a;
+    margin-bottom: 20px;
+}
+
+.editprofile .form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.editprofile .form-group {
+    width: 48%;
+}
+
+.editprofile .form-group label {
+    display: block;
+    color: #7a7a7a;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.editprofile input[type="text"],
+.editprofile input[type="email"],
+.editprofile select {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-bottom: 2px solid #e0e0e0;
+    font-size: 1rem;
+    color: #333;
+    background-color: transparent;
+}
+
+.editprofile input:focus,
+.editprofile select:focus {
+    border-bottom: 2px solid #2DCE89;
+    outline: none;
+}
+
+.editprofile .birth-date {
+    display: flex;
+    justify-content: space-between;
+}
+
+.editprofile .birth-date select {
+    width: 32%;
+}
+
+.editprofile .form-row button {
+    background-color: #2DCE89;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.editprofile .form-row button:hover {
+    background-color: #28a745;
+}
+
+/* Change Password Form Styles */
+.changepassword {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    flex-grow: 1;
+    margin-top: 20px;
+}
+
+.changepassword h2 {
+    color: #3c404a;
+    margin-bottom: 20px;
+}
+
+.changepassword .form-container {
+    width: 100%;
+}
+
+.changepassword .form-row {
+    margin-bottom: 20px;
+}
+
+/* Form group container */
+.changepassword .form-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+/* Input styles */
+.changepassword .form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #e0e0e0;
+    font-size: 1rem;
+    color: #333;
+    background-color: transparent;
+    border-radius: 5px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Placeholder */
+.changepassword .form-group input::placeholder {
+    color: transparent;
+}
+
+/* Label styles */
+.changepassword .form-group label {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    color: #7a7a7a;
+    pointer-events: none;
+    transform: translateY(-50%);
+    transition: 0.2s ease all;
+    background-color: white;
+    padding: 0 5px;
+    font-size: 1rem;
+}
+
+.changepassword .form-group input:focus + label,
+.changepassword .form-group input:not(:placeholder-shown) + label {
+    top: -10px;
+    left: 10px;
+    font-size: 0.875rem;
+    color: #2DCE89;
+    background-color: white;
+}
+
+/* Hiệu ứng khi input được focus */
+.changepassword .form-group input:focus {
+    border-color: #2DCE89;
+    outline: none;
+}
+
+.changepassword .form-row button {
+    background-color: #2DCE89;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.changepassword .form-row button:hover {
+    background-color: #28a745;
+}
+
+/* Password Requirements */
+.password-requirements ul {
+    list-style: none;
+    padding: 0;
+}
+
+.password-requirements ul li {
+    margin-bottom: 5px;
+}
+
+.btn-info {
+    background-color: #2DCE89;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.btn-info:hover {
+    background-color: #28a745;
+}
+
+/* Skills Tag Style */
+.skills span {
+    background-color: #f8f9fa;
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    display: inline-block;
+}
+
+/*----------------------Manager----------------------------------*/
+#manager-area {
+    flex-grow: 1;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);  
+    background-color: white;
+    border-radius: 20px;
+    top: 20px; /* Dính ở 20px từ đầu trang */
+    margin: -50px 10px 0 20px;
+    z-index: 10;
+}
+
+#moderate-area {
+    flex-grow: 1;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);  
+    background-color: white;
+    border-radius: 20px;
+    top: 20px; /* Dính ở 20px từ đầu trang */
+    margin: -50px 10px 0 20px;
+    z-index: 10;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .sidebar {
+        height: auto;
+        padding-bottom: 20px;
+        width: 100%;
+        margin-top: -300px; /* Dịch lên cho sidebar */
+    }
+
+    .sidebar .profile-header {
+        margin-bottom: 10px;
+    }
+
+    .settings-menu {
+        padding: 10px;
+    }
+
+    .content {
+        padding: 10px;
+    }
+}
+
+.alert-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Định dạng cho thông báo lỗi */
+.alert-danger {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Hiệu ứng chung cho tất cả các thông báo */
+.alert {
+    font-size: 0.9em;
+    text-align: center;
+}

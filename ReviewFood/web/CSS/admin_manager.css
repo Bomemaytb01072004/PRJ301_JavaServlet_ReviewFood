@@ -1,0 +1,724 @@
+/* General container styles */
+#admin-manager-section {
+  flex-grow: 1;
+  background-color: white;
+  border-radius: 20px;
+  z-index: 10;
+}
+
+.admin-manager-section h2 {
+  margin: 20px 0px 0px 10px;
+}
+
+/* Table styles */
+.admin-manager-section .product-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.admin-manager-section .product-table th:nth-child(1),
+.admin-manager-section .product-table td:nth-child(1) {
+  width: 30px;
+}
+
+.admin-manager-section .product-table th:nth-child(2),
+.admin-manager-section .product-table td:nth-child(2) {
+  width: 230px;
+}
+
+.admin-manager-section .product-table th:nth-child(3),
+.admin-manager-section .product-table td:nth-child(3) {
+  width: 150px;
+}
+
+.admin-manager-section .product-table th:nth-child(4),
+.admin-manager-section .product-table td:nth-child(4) {
+  width: 150px;
+}
+
+.admin-manager-section .product-table th:nth-child(5),
+.admin-manager-section .product-table td:nth-child(5) {
+  width: 100px;
+}
+
+.admin-manager-section .product-table th:nth-child(6),
+.admin-manager-section .product-table td:nth-child(6) {
+  width: 110px;
+}
+
+.admin-manager-section .product-table th:nth-child(7),
+.admin-manager-section .product-table td:nth-child(7) {
+  width: 110px;
+}
+
+.admin-manager-section .product-table th,
+.admin-manager-section .product-table td {
+  padding: 10px;
+  text-align: center;
+}
+
+.admin-manager-section .product-table thead th {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+.admin-manager-section .product-table tbody {
+  display: block;
+  max-height: 450px;
+  overflow-y: auto;
+  width: 100%;
+}
+
+.admin-manager-section .product-table tbody td {
+  border-left: 1px solid #151515;
+  border-right: 1px solid #151515;
+  border-bottom: 1px solid #151515;
+  text-align: center;
+}
+
+.admin-manager-section .product-table tbody button {
+  font-size: 14px;
+  padding: 8px 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  width: 130px;
+  height: 40px;
+}
+
+.admin-manager-section .product-table thead,
+.product-table tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.admin-manager-section .product-table img {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+}
+
+/* Header section for add product and search box */
+.admin-manager-section .product-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.admin-manager-section .product-header .search-box {
+  display: flex;
+}
+
+/* CSS for the input field */
+.admin-manager-section .product-header input {
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  border-top-right-radius: 0px; /* Bỏ radius cạnh phải */
+  border-bottom-right-radius: 0px; /* Bỏ radius cạnh phải */
+  border-right: none; /* Xóa đường viền phải để kết nối với nút */
+}
+
+/* Button styles */
+.btn {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+.admin-manager-section .btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.btn-edit-menu {
+  background-color: #007bff;
+  margin-right: 5px;
+}
+
+.admin-manager-section .btn-edit-menu:hover {
+  background-color: #0056b3;
+}
+
+.btn-delete {
+  background-color: #dc3545;
+}
+
+.admin-manager-section .btn-delete:hover {
+  background-color: #b22d3a;
+}
+
+/* Profile Information Styles */
+.profile-section {
+  margin: 100px auto; /* Điều chỉnh khoảng cách trên cùng */
+  background-color: white;
+  border-radius: 15px;
+  padding: 20px;
+  max-width: 800px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.profile-section h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.profile-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.profile-group {
+  width: 45%;
+}
+
+.profile-group label {
+  font-weight: bold;
+  color: #666;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.profile-data {
+  display: block;
+  font-size: 16px;
+  color: #333;
+  padding: 8px 0;
+}
+
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  color: red;
+}
+
+/* Modal for Manage Products */
+.modal-edit-menu {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+}
+
+/* Modal Content */
+.modal-edit-menu-content {
+  background-color: rgba(255, 255, 255, 0.9);
+  margin: auto;
+  padding: 20px;
+  border-radius: 15px;
+  width: auto;
+  max-width: 800px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* deleteAccount Background */
+.deleteAccount {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* deleteAccount Content */
+.deleteAccount-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 15px;
+  width: 400px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+}
+
+/* deleteAccount Header Icon */
+.deleteAccount-header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 10px;
+}
+
+.deleteAccount-icon {
+  background-color: #ffeded;
+  color: #ff5a5f;
+  font-size: 24px;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+/* deleteAccount Title */
+.deleteAccount h2 {
+  color: #333;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+/* deleteAccount Text */
+.deleteAccount p {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+/* deleteAccount Buttons */
+.deleteAccount-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.deleteAccount .btn {
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+}
+
+.deleteAccount .btn-cancel-delete {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.deleteAccount .btn-cancel-delete:hover {
+  background-color: #e0e0e0;
+}
+
+.deleteAccount .btn-confirm {
+  background-color: #ff5a5f;
+  color: white;
+}
+
+.deleteAccount .btn-confirm:hover {
+  background-color: #ff4045;
+}
+
+
+/*--------------------------------------------------*/
+/* General container styles */
+/* Table styles for review moderation */
+.admin-moderate-review-section .review-moderate-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  table-layout: auto; /* Giữ bảng tự động điều chỉnh kích thước cột dựa trên nội dung */
+}
+
+.admin-moderate-review-section h2 {
+  margin: 20px 0px 0px 10px;
+}
+
+.admin-moderate-review-section .review-moderate-table th,
+.admin-moderate-review-section .review-moderate-table td {
+  padding: 10px;
+  text-align: center;
+  border-left: 1px solid #151515;
+  border-right: 1px solid #151515;
+  border-bottom: 1px solid #151515;
+}
+
+.admin-moderate-review-section .review-moderate-table thead th {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Điều chỉnh độ rộng cột */
+.admin-moderate-review-section .review-moderate-table th:nth-child(1),
+.admin-moderate-review-section .review-moderate-table td:nth-child(1) {
+  width: 100px; /* Điều chỉnh chiều rộng cột đầu tiên */
+}
+
+.admin-moderate-review-section .review-moderate-table th:nth-child(2),
+.admin-moderate-review-section .review-moderate-table td:nth-child(2) {
+  width: 100px; /* Điều chỉnh chiều rộng cột ID_User */
+}
+
+.admin-moderate-review-section .review-moderate-table th:nth-child(3),
+.admin-moderate-review-section .review-moderate-table td:nth-child(3) {
+  width: 20%; /* Điều chỉnh chiều rộng cột Fullname */
+}
+
+.admin-moderate-review-section .review-moderate-table th:nth-child(4),
+.admin-moderate-review-section .review-moderate-table td:nth-child(4) {
+  width: 15%; /* Điều chỉnh chiều rộng cột Role */
+}
+
+.admin-moderate-review-section .review-moderate-table th:nth-child(5),
+.admin-moderate-review-section .review-moderate-table td:nth-child(5) {
+  width: 200px; /* Điều chỉnh chiều rộng cột View Detail */
+}
+
+.admin-moderate-review-section .review-moderate-table th:nth-child(6),
+.admin-moderate-review-section .review-moderate-table td:nth-child(6) {
+  width: 300px; /* Điều chỉnh chiều rộng cột Action */
+}
+
+/* Xóa display: block để không làm hỏng việc điều chỉnh kích thước cột */
+.admin-moderate-review-section .review-moderate-table tbody {
+  display: block;
+  max-height: 450px;
+  overflow-y: auto;
+  width: 100%;
+}
+
+
+.admin-moderate-review-section .review-moderate-table tbody button {
+  font-size: 14px;
+  padding: 8px 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  width: 130px;
+  height: 40px;
+}
+
+.admin-moderate-review-section .review-header-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.admin-moderate-review-section .review-header-section .search-box {
+  display: flex;
+}
+
+/* CSS for the input field */
+.admin-moderate-review-section .review-header-section input {
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  border-top-right-radius: 0px; /* Bỏ radius cạnh phải */
+  border-bottom-right-radius: 0px; /* Bỏ radius cạnh phải */
+  border-right: none; /* Xóa đường viền phải để kết nối với nút */
+}
+
+
+/* Button styles */
+.btn {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+.admin-moderate-review-section .btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.btn-view-review {
+  background-color: #007bff;
+  margin-right: 5px;
+}
+
+.admin-moderate-review-section .btn-view-review:hover {
+  background-color: #0056b3;
+}
+
+.btn-edit-review {
+  background-color: #1d901d;
+}
+
+.admin-moderate-review-section .btn-edit-review:hover {
+  background-color: #0d6832;
+}
+
+.btn-reject-review {
+  background-color: #dc3545;
+}
+
+.admin-moderate-review-section .btn-reject-review:hover {
+  background-color: #b22d3a;
+}
+
+/* Profile Information Styles */
+.review-section {
+  margin: 100px auto; /* Điều chỉnh khoảng cách trên cùng */
+  background-color: white;
+  border-radius: 15px;
+  padding: 20px;
+  max-width: 800px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.review-section h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.review-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.review-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.review-info h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.review-info p {
+  margin: 5px 0 0;
+  font-size: 14px;
+  color: #888;
+}
+
+.review-rating {
+  font-size: 24px;
+  background-color: #4CAF50;
+  font-weight: bold;
+  color: white;
+  border-radius: 50%; /* Đảm bảo hình tròn */
+  width: 50px;
+  height: 50px;
+  display: flex; /* Thêm display: flex để căn giữa */
+  align-items: center; /* Căn giữa theo trục dọc */
+  justify-content: center; /* Căn giữa theo trục ngang */
+  text-align: center; /* Đảm bảo text được căn giữa */
+}
+
+/* Review title */
+.review-section h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+/* Review content */
+.review-section p {
+  font-size: 16px;
+  margin-top: 10px;
+  line-height: 1.5;
+  color: #333;
+}
+
+/* Review image */
+.review-image {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.review-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Modal for review details */
+.modal-view-review {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+}
+
+/* Modal Content */
+.modal-view-review-content {
+  background-color: rgba(255, 255, 255, 0.9);
+  margin: auto;
+  padding: 20px;
+  border-radius: 15px;
+  width: auto;
+  max-width: 800px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.review-card {
+  margin-top: 30px;
+}
+
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  color: red;
+}
+
+/* deleteReview Modal */
+.deleteReview {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* deleteReview Content */
+.deleteReview-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 15px;
+  width: 400px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+}
+
+/* deleteReview Header Icon */
+.deleteReview-header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 10px;
+}
+
+.deleteReview-icon {
+  background-color: #ffeded;
+  color: #ff5a5f;
+  font-size: 24px;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+/* deleteReview Title */
+.deleteReview h2 {
+  color: #333;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+/* deleteReview Text */
+.deleteReview p {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+/* deleteReview Buttons */
+.deleteReview-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.deleteReview .btn {
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+}
+
+.deleteReview .btn-cancel-review {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.deleteReview .btn-cancel-review:hover {
+  background-color: #e0e0e0;
+}
+
+.deleteReview .btn-confirm-review {
+  background-color: #ff5a5f;
+  color: white;
+}
+
+.deleteReview .btn-confirm-review:hover {
+  background-color: #ff4045;
+}
+    
+/* Wrapper cho tbody để thêm tính năng cuộn */
+.table-body-wrapper {
+    max-height: 450px;
+    overflow-y: auto;
+    display: block;
+    width: 100%;
+}
+
+.review-moderate-table tbody {
+    display: table;
+    width: 100%;
+    table-layout: fixed; /* Giữ các cột cố định */
+}
+
+.review-moderate-table thead, 
+.review-moderate-table tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed; /* Giữ các cột cố định */
+}

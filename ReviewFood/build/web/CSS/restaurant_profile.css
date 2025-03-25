@@ -1,0 +1,884 @@
+.profile-container,
+.gallery-container {
+    background-color: white;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+}
+
+.profile-container img {
+    width: 480px;
+    height: 300px;
+}
+
+.profile-container div {
+    display: flex;
+}
+
+.between {
+    gap: 70px;
+}
+
+.profile-container-left img {
+    width: 400px;
+    height: 300px;
+}
+
+.profile-container-right {
+    display: block;
+}
+
+.breadcrumb {
+    margin-bottom: 10px;
+    height: fit-content;
+    display: flex;
+    gap: 5px;
+}
+
+.breadcrumb a {
+    text-decoration: none;
+    color: black;
+    font-size: 13px;
+}
+
+.breadcrumb span {
+    color: #BBBBBB;
+    font-size: 13px;
+}
+
+.margin-top {
+    margin-top: 10px;
+}
+
+.catergory {
+    text-decoration: none;
+    color: #888888;
+    font-size: 13px;
+    padding: 2px 5px 0px 0px;
+}
+
+.point-summary-container {
+    font-size: 14px;
+}
+
+.point-summary {
+    font-size: 25px;
+    margin: 7px 14px 0px 0px;
+    gap: 40px;
+}
+
+.point-avg {
+    background-color: #03AE03;
+    height: 50px;
+    width: 50px;
+    border-radius: 100px;
+    color: white;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mark {
+    display: flex;
+    flex-direction: column;
+}
+
+.green-text {
+    color: #03AE03;
+    font-weight: bold;
+}
+
+.status {
+    font-size: 13px;
+    color: #777777;
+    margin-top: 5px;
+}
+
+.address-restaurant {
+    font-size: 15px;
+    padding: 8px 5px 8px 0px;
+}
+
+.address-restaurant span i {
+    font-size: 14px;
+}
+
+.address {
+    gap: 10px;
+}
+
+.address,
+.status-restaurant div {
+    gap: 5px;
+}
+
+.status-restaurant {
+    gap: 5px;
+}
+
+.status-restaurant span {
+    font-size: 16px;
+}
+
+.status-restaurant,
+.address i {
+    font-size: 16px;
+}
+
+.option {
+    background-color: white;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 265px;
+}
+
+.option a {
+    text-decoration: none;
+    color: black;
+}
+
+.menu {
+    position: relative;
+    text-align: center;
+    display: grid;
+    align-items: center;
+    font-size: 50px;
+    
+}
+
+.menu-container {
+    background-color: white;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-columns: repeat(1, 1fr)
+}
+
+.menu-container-left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+
+.menu-container-left span {
+    font-weight: bold;
+}
+
+.menu-container-left div {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+}
+
+.menu-container-left i {
+    color: #03AE03;
+}
+
+.column {
+    display: flex;
+    gap: 100px;
+}
+
+.column div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.column img {
+    width: 100px;
+    height: 100px;
+}
+
+
+.gallery-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
+}
+
+.gallery-section-title {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.community-images {
+    display: flex;
+    gap: 50px;
+    margin-bottom: 20px;
+}
+
+.community-images img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 5px;
+    display: flex;
+}
+
+.upload-button {
+    width: 180px;
+    height: 180px;
+    border: 1px dashed #ccc;
+    background-color: #f8f8f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.albums {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.album {
+    width: 150px;
+    height: 195px;
+    text-align: center;
+    margin: 0px 15px 0px 0px;
+}
+
+.album img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.upload-placeholder {
+    width: 100%;
+    height: 150px;
+    border: 1px dashed #ccc;
+    background-color: #f8f8f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 13px;
+    color: black;
+}
+
+.album-title {
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.album-title a {
+    text-decoration: none;
+    color: black;
+    font-size: 12px;
+}
+
+.album-meta {
+    font-size: 12px;
+    color: #666;
+}
+
+.review-container {
+    background-color: #f4f4f4;
+    padding: 0;
+    margin: 20px auto;
+    max-width: 1200px;
+    border-radius: 10px;
+    display: flex;
+    gap: 20px;
+    grid-template-columns: 1fr 2fr 1fr;
+}
+
+.review-list {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 1000px;
+    padding: 20px;
+}
+
+.review-list-container-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.info {
+    margin-right: 590px;
+}
+
+.img {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+}
+
+.name {
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+    padding: 0px 3px 0px 0px;
+    font-weight: bold;
+}
+
+.time {
+    font-size: 11px;
+    color: #666666;
+}
+
+.review-point {
+    border-radius: 100%;
+    background-color: #03AE03;
+    font-size: 12px;
+    color: white;
+    width: 32px;
+    height: 32px;
+}
+
+.point {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    margin-top: 8px;
+}
+
+.divider {
+    border-bottom: 1px solid #ddd;
+    margin: 15px 0;
+}
+
+.title {
+    text-decoration: none;
+    color: black;
+    font-size: 17px;
+    padding: 8px 0px;
+    font-weight: bold;
+}
+
+.comments {
+    color: black;
+    font-size: 16px;
+    margin: 0px 0px 15px;
+}
+
+.comments img {
+    margin-top: 15px;
+    width: 500px;
+    height: 500px;
+}
+
+.interact {
+    font-size: 12px;
+    margin: 0px 0px 10px;
+
+}
+
+.interact a {
+    text-decoration: none;
+    padding: 5px 0px 0px;
+    color: #7F7F7F;
+}
+
+.reply {
+    background-color: #F9F9F9;
+    margin-top: 15px;
+}
+
+.reply-top {
+    display: flex;
+    gap: 10px;
+}
+
+.reply-top div {
+    font-size: 11px;
+    color: #888888;
+    padding: 2px 0px 0px;
+}
+
+.reply img {
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+}
+
+.reply a {
+    font-size: 12px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.reply-bottom {
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.rating-container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    padding: 20px;
+    height: 300px;
+}
+
+.rating-container i {
+    color: #03AE03;
+    margin-top: 5px;
+}
+
+.rating-container span {
+    margin-top: 5px;
+}
+
+.rating-box {
+    text-align: center;
+    align-items: center;
+}
+
+.summary {
+    padding: 20px 0px 15px;
+    color: black;
+    display: flex;
+    gap: 10px;
+}
+
+.font-avg {
+    font-size: 24px;
+}
+
+.rating-number {
+    gap: 10px;
+}
+
+.font-text {
+    font-size: 14px;
+    margin: 0px 16px 0px 0px;
+    min-width: 67px;
+    display: flex;
+}
+
+.font-text1 {
+    font-size: 12px;
+    margin: 0px 0px 0px 8px;
+}
+
+.evaluate {
+    display: flex;
+    min-width: 68px;
+    margin-bottom: 12px;
+}
+
+.all {
+    background-color: #E0E0E0;
+    min-width: 200px;
+    border-radius: 30px;
+}
+
+.point-green {
+    background-color: #03AE03;
+    border-radius: 30px;
+    color: #03AE03;
+}
+
+.comment i {
+    color: white;
+}
+
+.comment button {
+    color: white;
+    background-color: black;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.comment button:hover {
+    background-color: #555;
+}
+
+.menu-container-bottom button {
+    color: white;
+    background-color: black;
+    padding: 10px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.menu-container-bottom button:hover {
+    background-color: #555;
+}
+
+/* Dialog Styles */
+.dialog {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.dialog-content {
+    background-color: white;
+    margin: 4% auto;
+    padding: 20px;
+    width: 60%;
+    border-radius: 5px;
+    position: relative;
+    height: 670px;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.container-review {
+    background-color: #f4f4f4;
+    padding: 0;
+    margin: auto;
+    max-width: 1200px;
+    border-radius: 10px;
+    display: flex;
+    gap: 20px;
+    grid-template-columns: 1fr 2fr 1fr;
+}
+
+.container-left {
+    background-color: #f4f4f4;
+    width: 350x;
+    padding: 15px;
+}
+
+.food-image {
+    width: 100%;
+    height: 200px;
+}
+
+.restaurant-info {
+    margin: 5px 0px;
+}
+
+.info1 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 50px;
+}
+
+.info2 {
+    font-size: 18px;
+    color: black;
+    font-weight: bold;
+}
+
+.info2 span {
+    font-size: 14px;
+    color: #888888;
+}
+
+.rating {
+    background-color: #03AE03;
+    height: 40px;
+    width: 40px;
+    border-radius: 100px;
+    color: white;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rated {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    gap: 35px;
+}
+
+.rated1 div {
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.container-left-bottom {
+    background-color: white;
+    border-radius: 3px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 10px;
+}
+
+.comment-review {
+    font-weight: bold;
+    font-size: 17px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.feedback-ratings div {
+    margin: 5px 0;
+}
+
+.rating-box1 {
+    text-align: center;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+.container-right {
+    background-color: white;
+    border-radius: 3px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 440px;
+    margin-top: 15px;
+    margin-bottom: 19px;
+}
+
+.title-input,
+.comment-input {
+    width: 90%;
+    padding: 22px;
+    border: none;
+    outline: none;
+}
+
+.album1 {
+    width: 100px;
+    height: 80px;
+    text-align: center;
+    margin: 0px 15px 0px 0px;
+    margin-top: 260px;
+    margin-bottom: 10px;
+}
+
+.upload-placeholder1 {
+    width: 400px;
+    height: 30px;
+    border: 1px solid black #ccc;
+    background-color: #f8f8f8;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    color: black;
+    margin-left: 10px;
+    margin-top: 40px;
+}
+
+.actions {
+    display: flex;
+    /* justify-content: space-between; */
+    background-color: #E0E0E0;
+    height: 40px;
+}
+
+.actions .choose {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #03AE03;
+}
+
+.actions .notchoose {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #E0E0E0;
+}
+
+.actions button {
+    border: none;
+    background-color: #E0E0E0;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.interact1 {
+    display: flex;
+    gap: 5px;
+}
+
+
+.choose {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.notchoose {
+    background-color: #f1f1f1;
+    color: black;
+}
+
+
+
+/* Review Section  */
+#review-section {
+    padding: 20px;
+}
+
+.ratings {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.rating-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.rating-item label {
+    min-width: 100px;
+    font-weight: bold;
+}
+
+.rating-item input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 70%;
+    height: 8px;
+    background: #4CAF50;
+    border-radius: 5px;
+    outline: none;
+}
+
+.options {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+    margin-bottom: 150px;
+}
+
+.options select {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 140px;
+}
+
+#picture-tab.choose {
+    padding: 10px;
+    background-color: #03AE03;
+    color: white;
+    /* Optional: Changes text color to white for better contrast */
+}
+
+#review-tab.choose {
+    padding: 10px;
+    background-color: #03AE03;
+    /* Keep the review tab in blue when selected, if needed */
+    color: white;
+}
+
+.actions1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    background-color: #E0E0E0;
+    height: 40px;
+}
+
+.actions1 .choose {  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #03AE03;
+}
+
+.actions1 .notchoose {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #E0E0E0;
+}
+
+.actions1 button {
+    border: none;
+    background-color: #E0E0E0;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+
+/* Phone Popup Background */
+.phone-popup {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Popup Content */
+.phone-popup-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 5px;
+    width: 300px;
+    text-align: center;
+    position: relative;
+}
+
+/* Close Button */
+.close-phone-popup {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+

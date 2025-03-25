@@ -1,0 +1,253 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: -30px;
+    gap: 25px;
+}
+
+.header-bottom {
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.row1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+
+}
+
+.logo img {
+    height: 60px;
+    margin-right: -10px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.menu {
+    display: flex;
+    gap: 15px;
+    /* margin: 45px 600px -10px 50px; */
+}
+
+
+.menu a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    padding: 10px 15px;
+    /* Tạo khoảng trống bên trong để nhìn rõ bo tròn */
+    transition: background-color 0.3s ease, border-radius 0.3s ease;
+    /* Hiệu ứng mượt khi hover */
+    border-radius: 5px;
+    /* Bo tròn nhẹ mặc định */
+}
+
+/* Hiệu ứng hover */
+.menu a:hover {
+    background-color: #f0f0f0;
+    /* Màu xám nhạt khi hover */
+    border-radius: 25px;
+    /* Bo tròn khi hover */
+}
+
+
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 450px;
+    width: 100%;
+    background-image: url('https://wallpapers.com/images/featured/food-4k-1pf6px6ryqfjtnyr.jpg');
+    /* Add your image here */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    position: relative;
+}
+
+.search-bar h1 {
+    font-size: 30px;
+    margin: 0;
+}
+
+.search-input {
+    display: flex;
+    margin-top: 20px;
+    width: 300%;
+    margin-left: -400px;
+    height: 60px;
+}
+
+.search-input input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    border-radius: 50px 0 0 50px;
+    /* Bo góc bên trái */
+}
+
+.search-input button {
+    padding: 10px;
+    border: none;
+    background-color: white;
+    color: white;
+    border-radius: 0 50px 50px 0;
+    /* Bo góc bên phải */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-input button i {
+    font-size: 16px;
+    /* Font size của kính lúp */
+    color: black;
+}
+
+.search-bar1 {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    margin: 0 20px;
+
+}
+
+.search-input1 {
+    display: flex;
+    height: 50px;
+}
+
+.search-input1 input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid gainsboro;
+    border-right: none;
+    border-radius: 45px 0 0 45px;
+    font-size: 16px;
+    width: 300px;
+
+}
+
+.search-input1 button {
+    padding: 10px;
+    border: 2px solid gainsboro;
+    background-color: white;
+    color: white;
+    border-left: none;
+    border-radius: 0 45px 45px 0;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-input1 button i {
+    font-size: 16px;
+    /* Font size của kính lúp */
+    color: black;
+}
+
+.user-button {
+    margin-left: auto;
+    /* Đẩy phần user-button sang bên phải */
+    padding-right: 20px;
+    /* Khoảng cách từ nút đến viền bên phải */
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    /* Khoảng cách giữa Sign in và Translate */
+}
+
+.user-button button {
+    color: white;
+    background-color: black;
+    padding: 10px 20px;
+    /* Tạo khoảng trống bên trong để trông như nút */
+    border-radius: 20px;
+    /* Bo tròn góc */
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    /* Tạo hiệu ứng chuyển khi hover */
+}
+
+.user-button button:hover {
+    background-color: #555;
+    /* Thay đổi màu nền khi hover */
+}
+
+/* Nút Translate */
+.translate-button {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    border: 1px solid white;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.translate-button:hover {
+    background-color: #f0f0f0;
+    /* Màu nền khi hover */
+    border-color: none;
+    /* Màu viền  khi hover */
+}
+
+/* icon qua dia cau và tránlate */
+.translate-button i {
+    font-size: 16px;
+    margin-right: 1px;
+    /* Khoảng cách giữa icon và văn bản */
+}
+
+.translate-button .separator {
+    margin: 0 8px;
+    /* Khoảng cách giữa dấu gạch dọc và icon, văn bản */
+    font-weight: bold;
+    color: black;
+}
+
+.translate-button span {
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+}
+

@@ -1,0 +1,839 @@
+/* General container styles */
+#restaurant-manager-section {
+  flex-grow: 1; 
+  background-color: white;
+  border-radius: 20px;
+  z-index: 10;
+}
+
+.restaurant-manager-section h2 {
+margin: 20px 0px 0px 10px;
+}
+
+/* Table styles */
+.restaurant-manager-section .product-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.restaurant-manager-section .product-table th:nth-child(1), 
+.restaurant-manager-section .product-table td:nth-child(1) {
+    width: 20px; /* Chiều rộng cố định cho cột hình ảnh */
+}
+
+.restaurant-manager-section .product-table th:nth-child(2), 
+.restaurant-manager-section .product-table td:nth-child(2) {
+    width: 50px; /* Chiều rộng cố định cho cột hình ảnh */
+}
+
+.restaurant-manager-section .product-table th:nth-child(3), 
+.restaurant-manager-section .product-table td:nth-child(3) {
+    width: 150px; /* Chiều rộng cố định cho cột hình ảnh */
+}
+
+.restaurant-manager-section .product-table th:nth-child(4), 
+.restaurant-manager-section .product-table td:nth-child(4) {
+    width: 150px; /* Chiều rộng cố định cho cột 'View menu' */
+}
+
+.restaurant-manager-section .product-table th:nth-child(5), 
+.restaurant-manager-section .product-table td:nth-child(5) {
+    width: 80px; /* Chiều rộng cố định cho cột 'View menu' */
+}
+
+.restaurant-manager-section .product-table th:nth-child(6), 
+.restaurant-manager-section .product-table td:nth-child(6) {
+    width: 150px; /* Chiều rộng cố định cho cột hình ảnh */
+}
+
+/* Giữ các cột còn lại để chúng có thể tự động điều chỉnh */
+.restaurant-manager-section .product-table th, 
+.restaurant-manager-section .product-table td {
+    padding: 10px;
+    text-align: center;
+}
+
+.restaurant-manager-section .product-table thead th {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+.restaurant-manager-section .product-table tbody {
+  display: block; /* Cho phép <tbody> hoạt động như một khối có thể cuộn */
+  max-height: 400px; /* Chiều cao tối đa của <tbody> để nội dung cuộn */
+  overflow-y: auto; /* Kích hoạt cuộn dọc */
+  width: 100%; /* Đảm bảo phần cuộn không làm mất kích thước của bảng */
+}
+
+.restaurant-manager-section .product-table tbody td {
+  border-left: 1px solid #151515;
+  border-right: 1px solid #151515;
+  border-bottom: 1px solid #151515;
+  text-align: center;
+  }
+
+.restaurant-manager-section .product-table tbody button {
+  font-size: 14px; /* Đảm bảo font-size đồng nhất cho tất cả các button */
+  padding: 8px 12px; /* Đảm bảo padding đồng nhất */
+  display: inline-flex; /* Canh đều biểu tượng và chữ */
+  align-items: center; /* Canh giữa icon và text */
+  gap: 5px; /* Khoảng cách giữa icon và text */
+  width: 130px; /* Đảm bảo chiều rộng bằng nhau */
+  height: 40px; /* Đảm bảo chiều cao bằng nhau */
+}
+
+.restaurant-manager-section .product-table thead, .product-table tbody tr {
+  display: table; /* Đảm bảo các hàng vẫn giữ nguyên bố cục bảng */
+  width: 100%;
+  table-layout: fixed; /* Cố định bố cục của bảng */
+}
+
+.restaurant-manager-section .product-table img {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+}
+
+/* Header section for add product and search box */
+.restaurant-manager-section .product-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.restaurant-manager-section .product-header .search-box {
+  display: flex;
+}
+
+.restaurant-manager-section .product-header input {
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+/* Button styles */
+.btn {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center; /* Canh giữa nội dung theo chiều ngang */
+  align-items: center; /* Canh giữa nội dung theo chiều dọc */
+}
+
+.btn-add-restaurant {
+background-color: #007bff;
+margin-left: 10px;
+}
+
+.restaurant-manager-section .btn-add-restaurant:hover {
+  background-color: #0056b3;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+.restaurant-manager-section .btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.btn-edit-restaurant {
+background-color: #007bff;
+margin-right: 5px;
+}
+
+.restaurant-manager-section .btn-edit-restaurant:hover {
+  background-color: #0056b3;
+}
+
+.btn-edit-menu {
+  background-color: #007bff;
+  margin-right: 5px;
+}
+
+.restaurant-manager-section .btn-edit-menu:hover {
+  background-color: #0056b3;
+}
+
+.btn-delete {
+  background-color: #dc3545;
+}
+
+.restaurant-manager-section .btn-delete:hover {
+  background-color: #b22d3a;
+}
+
+/* Add Restaurant */
+.modal-add-restaurant {
+display: none; /* Ẩn modal theo mặc định */
+position: fixed;
+z-index: 100;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-add-restaurant-content {
+background-color: #fff;
+margin: 5% auto;
+padding: 20px;
+border-radius: 15px;
+width: 500px;
+box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+text-align: center;
+}
+
+.modal-add-restaurant-header {
+display: flex;
+justify-content: center;
+margin-bottom: 15px;
+}
+
+.modal-add-restaurant-icon {
+background-color: #e9f7fe;
+color: #007bff;
+font-size: 24px;
+padding: 10px;
+border-radius: 50%;
+}
+
+.modal-add-restaurant-form-group {
+margin-bottom: 20px;
+text-align: left;
+}
+
+.modal-add-restaurant-form-group label {
+display: block;
+margin-bottom: 5px;
+color: #333;
+}
+
+.modal-add-restaurant-form-group input {
+width: 100%;
+padding: 10px;
+border: 1px solid #ccc;
+border-radius: 4px;
+}
+
+.modal-add-restaurant-actions {
+display: flex;
+justify-content: space-between;
+}
+
+.modal-add-restaurant-actions .btn {
+padding: 10px 20px;
+border-radius: 25px;
+font-size: 14px;
+cursor: pointer;
+border: none;
+}
+
+.modal-add-restaurant-actions .btn-cancel-add {
+background-color: #f0f0f0;
+color: #333;
+}
+
+.modal-add-restaurant-actions .btn-cancel-add:hover {
+background-color: #e0e0e0;
+}
+
+.modal-add-restaurant-actions .btn-confirm-save-restaurant-change {
+background-color: #007bff;
+color: white;
+}
+
+.modal-add-restaurant-actions .btn-confirm-save-restaurant-change:hover {
+background-color: #0056b3;
+}
+
+/* Edit Restaurant */
+.modal-edit-restaurant {
+display: none; /* Ẩn modal theo mặc định */
+position: fixed;
+z-index: 100;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-edit-restaurant-content {
+background-color: #fff;
+margin: 5% auto;
+padding: 20px;
+border-radius: 15px;
+width: 700px;
+box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+text-align: center;
+}
+
+.modal-edit-restaurant-header {
+display: flex;
+justify-content: center;
+margin-bottom: 15px;
+}
+
+.modal-edit-restaurant-icon {
+background-color: #e9f7fe;
+color: #007bff;
+font-size: 24px;
+padding: 10px;
+border-radius: 50%;
+}
+
+.modal-edit-restaurant-form-group {
+margin-bottom: 20px;
+text-align: left;
+}
+
+.modal-edit-restaurant-form-group label {
+display: block;
+margin-bottom: 5px;
+color: #333;
+}
+
+.modal-edit-restaurant-form-group input {
+width: 100%;
+padding: 10px;
+border: 1px solid #ccc;
+border-radius: 4px;
+}
+
+.modal-edit-restaurant-actions {
+display: flex;
+justify-content: space-between;
+}
+
+.modal-edit-restaurant-actions .btn {
+padding: 10px 20px;
+border-radius: 25px;
+font-size: 14px;
+cursor: pointer;
+border: none;
+}
+
+.modal-edit-restaurant-actions .btn-cancel-edit {
+background-color: #f0f0f0;
+color: #333;
+}
+
+.modal-edit-restaurant-actions .btn-cancel-edit:hover {
+background-color: #e0e0e0;
+}
+
+.modal-edit-restaurant-actions .btn-confirm-save-restaurant-change {
+background-color: #007bff;
+color: white;
+}
+
+.modal-edit-restaurant-actions .btn-confirm-save-restaurant-change:hover {
+background-color: #0056b3;
+}
+
+/* deleteRestaurant Background */
+.deleteRestaurant {
+display: none; /* Hidden by default */
+position: fixed;
+z-index: 100;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* deleteRestaurant Content */
+.deleteRestaurant-content {
+background-color: #fff;
+margin: 10% auto;
+padding: 20px;
+border-radius: 15px;
+width: 400px;
+box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+text-align: center;
+font-family: 'Arial', sans-serif;
+}
+
+/* deleteRestaurant Header Icon */
+.deleteRestaurant-header {
+display: flex;
+justify-content: center;
+margin-bottom: 15px;
+border-bottom: 1px solid #e0e0e0; /* Thêm đường kẻ ngang */
+padding-bottom: 10px; /* Tạo khoảng cách bên dưới */
+}
+
+.deleteRestaurant-icon {
+background-color: #ffeded;
+color: #ff5a5f;
+font-size: 24px;
+padding: 10px;
+border-radius: 50%;
+}
+
+/* deleteRestaurant Title */
+.deleteRestaurant h2 {
+color: #333;
+margin-bottom: 10px;
+font-size: 20px;
+}
+
+/* deleteRestaurant Text */
+.deleteRestaurant p {
+color: #666;
+font-size: 14px;
+margin-bottom: 20px;
+}
+
+/* deleteRestaurant Buttons */
+.deleteRestaurant-actions {
+display: flex;
+justify-content: space-between;
+}
+
+.deleteRestaurant .btn {
+padding: 10px 20px;
+border-radius: 25px;
+font-size: 14px;
+cursor: pointer;
+border: none;
+}
+
+.deleteRestaurant .btn-cancel-delete {
+background-color: #f0f0f0;
+color: #333;
+}
+
+.deleteRestaurant .btn-cancel-delete:hover {
+background-color: #e0e0e0;
+}
+
+.deleteRestaurant .btn-confirm {
+background-color: #ff5a5f;
+color: white;
+}
+
+.deleteRestaurant .btn-confirm:hover {
+background-color: #ff4045;
+}
+
+/* Modal for Manage Products */
+.modal-edit-menu {
+display: none; /* Ẩn modal mặc định */
+position: fixed;
+z-index: 100;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.5); /* Nền mờ */
+}
+
+/* Modal Content */
+.modal-edit-menu-content {
+background-color: #fff;
+margin: 5% auto;
+padding: 20px;
+border-radius: 15px;
+width: 80%; /* Điều chỉnh chiều rộng modal */
+height: 85%;
+max-width: 1500px;
+max-height: 1000px;
+box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+font-family: 'Arial', sans-serif;
+text-align: center;
+}
+
+/* Modal Header Icon */
+.modal-edit-menu-header {
+display: flex;
+justify-content: center;
+margin-bottom: 15px;
+}
+
+.modal-edit-menu-icon {
+background-color: #ffeded;
+color: #ff5a5f;
+font-size: 24px;
+padding: 10px;
+border-radius: 50%;
+}
+
+/* Table Styles */
+.modal-edit-menu .product-table {
+height: 65%;
+width: 100%;
+border-collapse: collapse;
+margin-top: 20px;
+}
+
+.modal-edit-menu .product-table thead th {
+background-color: #333;
+color: white;
+padding: 10px;
+text-align: center;
+}
+
+.modal-edit-menu .product-table tbody td {
+padding: 10px;
+border-bottom: 1px solid #151515;
+text-align: center;
+}
+
+.modal-edit-menu .product-table tbody td img {
+width: 50px;
+height: 50px;
+border-radius: 5px;
+}
+
+/* Modal Actions */
+.modal-edit-menu-actions {
+margin-top: 20px;
+display: flex;
+justify-content: center;
+}
+
+.modal-edit-menu-actions .btn-cancel {
+background-color: #f0f0f0;
+color: #333;
+padding: 10px 20px;
+border-radius: 25px;
+cursor: pointer;
+border: none;
+}
+
+.gradient-icon {
+  background: linear-gradient(90deg, rgba(17,153,142,1) 0%, rgba(70,231,156,1) 35%, rgba(29,173,83,1) 100%);
+  background-clip: text; /* Thuộc tính mặc định */
+  -webkit-background-clip: text; /* Tiền tố dành cho trình duyệt WebKit (Chrome, Safari) */
+  -webkit-text-fill-color: transparent; /* Làm văn bản trong suốt để hiển thị gradient nền */
+  font-size: 40px;
+}
+
+/* Add Product */
+.modal-add-product {
+  display: none; /* Ẩn modal theo mặc định */
+  position: fixed;
+  z-index: 200;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+.modal-add-product-content {
+  background-color: #fff;
+  margin: 5% auto;
+  padding: 20px;
+  border-radius: 15px;
+  width: 500px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+  
+.modal-add-product-header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+  
+.modal-add-product-icon {
+  background-color: #e9f7fe;
+  color: #007bff;
+  font-size: 24px;
+  padding: 10px;
+  border-radius: 50%;
+}
+  
+.modal-add-product-form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+  
+.modal-add-product-form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+  
+.modal-add-product-form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+  
+.modal-add-product-actions {
+  display: flex;
+  justify-content: space-between;
+}
+  
+.modal-add-product-actions .btn {
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+}
+  
+.modal-add-product-actions .btn-cancel-add {
+  background-color: #f0f0f0;
+  color: #333;
+}
+  
+.modal-add-product-actions .btn-cancel-add:hover {
+  background-color: #e0e0e0;
+}
+  
+.modal-add-product-actions .btn-confirm-save-product-change {
+  background-color: #007bff;
+  color: white;
+}
+  
+.modal-add-product-actions .btn-confirm-save-product-change:hover {
+  background-color: #0056b3;
+}
+
+/* Edit Product */
+.modal-edit-product {
+  display: none; /* Ẩn modal theo mặc định */
+  position: fixed;
+  z-index: 200;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+  
+.modal-edit-product-content {
+  background-color: #fff;
+  margin: 5% auto;
+  padding: 20px;
+  border-radius: 15px;
+  width: 500px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+  
+.modal-edit-product-header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+  
+.modal-edit-product-icon {
+  background-color: #e9f7fe;
+  color: #007bff;
+  font-size: 24px;
+  padding: 10px;
+  border-radius: 50%;
+}
+  
+.modal-edit-product-form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+  
+.modal-edit-product-form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+  
+.modal-edit-product-form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+  
+.modal-edit-product-actions {
+  display: flex;
+  justify-content: space-between;
+}
+  
+.modal-edit-product-actions .btn {
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+}
+  
+.modal-edit-product-actions .btn-cancel-edit {
+  background-color: #f0f0f0;
+  color: #333;
+}
+  
+.modal-edit-product-actions .btn-cancel-edit:hover {
+  background-color: #e0e0e0;
+}
+  
+.modal-edit-product-actions .btn-confirm-save-product-change {
+  background-color: #007bff;
+  color: white;
+}
+  
+.modal-edit-product-actions .btn-confirm-save-product-change:hover {
+  background-color: #0056b3;
+}
+
+/* delete-Product Background */
+.delete-product {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 200;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  /* delete-product Content */
+  .delete-product-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 15px;
+  width: 400px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  }
+  
+  /* delete-product Header Icon */
+  .delete-product-header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #e0e0e0; /* Thêm đường kẻ ngang */
+  padding-bottom: 10px; /* Tạo khoảng cách bên dưới */
+  }
+  
+  .delete-product-icon {
+  background-color: #ffeded;
+  color: #ff5a5f;
+  font-size: 24px;
+  padding: 10px;
+  border-radius: 50%;
+  }
+  
+  /* delete-product Title */
+  .delete-product h2 {
+  color: #333;
+  margin-bottom: 10px;
+  font-size: 20px;
+  }
+  
+  /* delete-product Text */
+  .delete-product p {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 20px;
+  }
+  
+  /* delete-product Buttons */
+  .delete-product-actions {
+  display: flex;
+  justify-content: space-between;
+  }
+  
+  .delete-product .btn {
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  }
+  
+  .delete-product .btn-cancel-delete {
+  background-color: #f0f0f0;
+  color: #333;
+  }
+  
+  .delete-product .btn-cancel-delete:hover {
+  background-color: #e0e0e0;
+  }
+  
+  .delete-product .btn-confirm {
+  background-color: #ff5a5f;
+  color: white;
+  }
+  
+  .delete-product .btn-confirm:hover {
+  background-color: #ff4045;
+  }
+/*Nút Add Product*/
+  .btn-add-product {
+    background-color: #007bff;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+  }
+  
+  .modal-edit-menu .btn-add-product:hover {
+    background-color: #0056b3;
+  }
+/*Nút Edit Product*/
+  .btn-edit-product {
+    background-color: #007bff;
+    margin-right: 5px;
+  }
+  
+  .modal-edit-menu .btn-edit-product:hover {
+    background-color: #0056b3;
+  }
+/*Nút Delete Product*/
+  .btn-delete-product {
+    background-color: #dc3545;
+  }
+  
+  .modal-edit-menu .btn-delete-product:hover {
+    background-color: #b22d3a;
+  }
+
+/* Định nghĩa chiều rộng cho từng cột trong bảng sản phẩm */
+.modal-edit-menu .product-table th:nth-child(1),
+.modal-edit-menu .product-table td:nth-child(1) {
+    width: 50px;
+    text-align: center;
+}
+
+.modal-edit-menu .product-table th:nth-child(2),
+.modal-edit-menu .product-table td:nth-child(2) {
+    width: 150px;
+}
+
+.modal-edit-menu .product-table th:nth-child(3),
+.modal-edit-menu .product-table td:nth-child(3) {
+    width: 70px;
+    text-align: center;
+}
+
+.modal-edit-menu .product-table th:nth-child(4),
+.modal-edit-menu .product-table td:nth-child(4) {
+    width: 70px;
+    text-align: center;
+}
+
+.modal-edit-menu .product-table th:nth-child(5),
+.modal-edit-menu .product-table td:nth-child(5) {
+    width: 130px;
+    text-align: center;
+}
